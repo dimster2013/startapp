@@ -8,12 +8,9 @@
  * Controller of the yomanApp
  */
 angular.module('yomanApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'AngularJS'
-    ];
+  .controller('MainCtrl', function ($scope,_) {
 
-    _.each([1,2,3],console.log);
+    $scope.hoer=null;
+    var stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly', age: 60}];
+    $scope.hoer = _.pluck(stooges, 'name');
   });

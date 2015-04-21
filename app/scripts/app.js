@@ -1,13 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name yomanApp
- * @description
- * # yomanApp
- *
- * Main module of the application.
- */
 angular
   .module('yomanApp', [
     'ngAnimate',
@@ -16,8 +8,6 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'underscore'
-
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -44,4 +34,7 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+  .constant('_',
+    window._
+  );
