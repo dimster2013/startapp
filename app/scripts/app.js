@@ -15,7 +15,9 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'underscore'
+
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -33,6 +35,10 @@ angular
       })
       .when('/accordeon', {
         templateUrl: 'views/accordeon.html',
+        controller: 'IssuesCtrl'
+      })
+      .when('/carousel', {
+        templateUrl: 'views/carousel.html',
         controller: 'IssuesCtrl'
       })
       .otherwise({
